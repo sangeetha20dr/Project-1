@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Illiteracy Project</title>
+    <link rel="stylesheet" href="home.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            background-color: #e0efe0;
+            color: white;
+            text-align: center;
+            padding: 1em;
+            position: relative;
+        }
+
+        #slideshow {
+            max-width: 100%;
+            max-height: 400px;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        #slideshow img {
+            width: 100%;
+            height: auto;
+            display: none;
+        }
+
+        footer {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 1em;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section with Slideshow -->
+    <header>
+        <h1>Illiteracy Project</h1>
+        <p>Empowering individuals through literacy</p>
+        <div id="slideshow">
+            <img src="sa.jpg" alt="Header Image 1">
+            <img src="ra.jpg" alt="Header Image 2">
+            <img src="reg.jpg" alt="Header Image 3">
+            <!-- Add more images as needed -->
+        </div>
+    </header>
+
+    <!-- Rest of your content -->
+
+    <footer>
+        <p>&copy; 2023 Illiteracy Project. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript for Slideshow -->
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('#slideshow img');
+        
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.style.display = i === index ? 'block' : 'none';
+            });
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        // Change slide every 3 seconds
+        setInterval(nextSlide, 3000);
+
+        // Initial display
+        showSlide(currentSlide);
+    </script>
+
+</body>
+</html>
