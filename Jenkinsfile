@@ -16,5 +16,11 @@ pipeline {
                 echo 'deploying.........'
             }
         }
+        stage('Checkout') {
+            steps {
+                // Checkout the code from version control
+                git 'https://your-repo-url.git'
+            }
+        }
     }
 } 
