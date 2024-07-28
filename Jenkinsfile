@@ -19,7 +19,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 // Checkout the code from version control
-                git 'https://your-repo-url.git'
+                git 'https://github.com/sangeetha20dr/Project-1.git'
             }
         }
     }
